@@ -18,7 +18,7 @@ pipeline {
         stage('Git: Code Checkout') {
             steps {
                 script{
-                    code_checkout("https://github.com/DevMadhup/Springboot-BankApp.git","DevOps")
+                    code_checkout("https://github.com/Bismaya2401/Bank-App.git","DevOps")
                 }
             }
         }
@@ -37,7 +37,7 @@ pipeline {
                 script{
                     dir('kubernetes'){
                         sh """
-                            sed -i -e 's|madhupdevops/bankapp:.*|madhupdevops/bankapp:${params.DOCKER_TAG}|g' bankapp-deployment.yaml
+                            sed -i -e 's|bismaya2401/bankapp:.*|bismaya2401/bankapp:${params.DOCKER_TAG}|g' bankapp-deployment.yaml
                         """
                     }
                 }
@@ -59,7 +59,7 @@ pipeline {
                         git commit -m "Updated K8s Deployment Docker Image Version"
                         
                         echo "Pushing changes to github: "
-                        git push https://github.com/DevMadhup/Springboot-BankApp.git DevOps
+                        git push https://github.com/Bismaya2401/Bank-App.git DevOps
                     '''
                     }
                 }
