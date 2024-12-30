@@ -70,7 +70,7 @@ pipeline {
         always {
             script {
                 emailext attachLog: true,
-                from: '8007930568pandey@gmail.com',
+                from: 'bimayaparida4@gmail.com',
                 subject: "BankApp Application has been updated and deployed - '${currentBuild.result}'",
                 body: """
                     <html>
@@ -87,7 +87,7 @@ pipeline {
                     </body>
                     </html>
             """,
-            to: '8007930568pandey@gmail.com',
+            to: 'bismayaparida4@gmail.com',
             mimeType: 'text/html'
             }
         }
