@@ -1,5 +1,8 @@
 End-to-End Bank Application Deployment using DevSecOps on AWS EKS
 This is a multi-tier bank an application written in Java (Springboot).
+![Alt text](Bank-App/images
+/DevSecOps+GitOps (1).gif)
+
 Login diagram Transactions diagram# CI/CD Pipeline with AWS EKS and Jenkins
 
 This repository provides a complete guide to setting up a CI/CD pipeline using Jenkins, Docker, AWS EKS, and other DevOps tools. The pipeline includes code quality checks, containerization, deployment, and monitoring.
