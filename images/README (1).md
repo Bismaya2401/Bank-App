@@ -3,8 +3,11 @@
 
 This is a multi-tier banking application written in Java (Spring Boot).
 
-![Application Workflow](Bank-App/images/DevSecOps+GitOps.gif)
 
+### <mark>Project Deployment Flow:</mark>
+<img src="https://github.com/DevMadhup/Wanderlust-Mega-Project/blob/main/Assets/DevSecOps%2BGitOps.gif" />
+
+#
 ## Features
 - **Login Diagram**  
 - **Transactions Diagram**
