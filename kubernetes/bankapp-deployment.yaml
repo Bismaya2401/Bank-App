@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: bankapp
-        image: bismaya2401/bankapp:v22
+        image: bismaya2401/bankapp:v25
         ports:
         - containerPort: 8080
         env:
