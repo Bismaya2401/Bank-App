@@ -342,7 +342,7 @@ sudo apt-get install trivy -y
 ![Login diagram](images/gitcred.png)
 #
 - <b>Navigate to <mark> Manage Jenkins --> credentials</mark> and add credentials for docker login to push docker image:</b>
-![image](https://github.com/user-attachments/assets/1a8287fc-b205-4156-8342-3f660f15e8fa)
+
 #
 - <b>Create a <mark>Wanderlust-CI</mark> pipeline</b>
 ![image](https://github.com/user-attachments/assets/55c7b611-3c20-445f-a49c-7d779894e232)
@@ -351,7 +351,7 @@ sudo apt-get install trivy -y
 - <b>Create one more pipeline <mark>Wanderlust-CD</mark></b>
 ![image](https://github.com/user-attachments/assets/23f84a93-901b-45e3-b4e8-a12cbed13986)
 ![image](https://github.com/user-attachments/assets/ac79f7e6-c02c-4431-bb3b-5c7489a93a63)
-![image](https://github.com/user-attachments/assets/46a5937f-e06e-4265-ac0f-42543576a5cd)
+
 #
 - <b>Provide permission to docker socket so that docker build and push command do not fail (Jenkins Worker)</b>
 ```bash
@@ -393,32 +393,31 @@ chmod 777 /var/run/docker.sock
 - <b>Go to <mark>Settings --> Repositories</mark> and click on <mark>Connect repo</mark> </b>
 ![image](https://github.com/user-attachments/assets/cc8728e5-546b-4c46-bd4c-538f4cd6a63d)
 ![image](https://github.com/user-attachments/assets/eb3646e2-db84-4439-a11a-d4168080d9cc)
-![image](https://github.com/user-attachments/assets/a07f8703-5ef3-4524-aaa7-39a139335eb7)
+
 > [!Note]
 > Connection should be successful
 
 - <b>Now, go to <mark>Applications</mark> and click on <mark>New App</mark></b>
 
-![image](https://github.com/user-attachments/assets/ec2d7a51-d78f-4947-a90b-258944ad59a2)
+
 
 > [!Important]
 > Make sure to click on the <mark>Auto-Create Namespace</mark> option while creating argocd application
 
-![image](https://github.com/user-attachments/assets/55dcd3c2-5424-4efb-9bee-1c12bbf7f158)
-![image](https://github.com/user-attachments/assets/3e2468ff-8cb2-4bda-a8cc-0742cd6d0cae)
+
 
 - <b>Congratulations, your application is deployed on AWS EKS Cluster</b>
-![image](https://github.com/user-attachments/assets/bc2d9680-fe00-49f9-81bf-93c5595c20cc)
-![image](https://github.com/user-attachments/assets/1ea9d486-656e-40f1-804d-2651efb54cf6)
+![Login diagram](images/1.png)
+![Login diagram](images/2.png)
 - <b>Open port 31000 and 31100 on worker node and Access it on browser</b>
 ```bash
 <worker-public-ip>:31000
 ```
-![image](https://github.com/user-attachments/assets/a4b2a4b4-e1aa-4b22-ac6b-f40003d0723a)
-![image](https://github.com/user-attachments/assets/06f9f1c8-094d-4d9f-a9d8-256fb18a9ae4)
-![image](https://github.com/user-attachments/assets/64394f90-8610-44c0-9f63-c3a21eb78f55)
+![Login diagram](images/1.png)
+![Login diagram](images/3.png)
+![Login diagram](images/1.png)
 - <b>Email Notification</b>
-![image](https://github.com/user-attachments/assets/0ab1ef47-f939-4618-8651-6aa9274721f4)
+![Login diagram](images/emailtig.png)
 
 #
 ## How to monitor EKS cluster, kubernetes components and workloads using prometheus and grafana via HELM (On Master machine)
