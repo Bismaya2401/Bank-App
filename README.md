@@ -27,13 +27,13 @@
 
 ### How pipeline will look after deployment:
 - <b>CI pipeline to build and push</b>
-![image](https://github.com/user-attachments/assets/20542d8b-0701-43ed-b2f8-82f8ed28d053)
+![Login diagram](images/ci.png)
 
 - <b>CD pipeline to update application version</b>
-![image](https://github.com/user-attachments/assets/8fd13807-622e-45f7-af23-dcc1ba30ca5d)
+![Login diagram](images/cd.png)
 
 - <b>ArgoCD application for deployment on EKS</b>
-![image](https://github.com/user-attachments/assets/1ea9d486-656e-40f1-804d-2651efb54cf6)
+![Login diagram](images/2.png)
 
 #
 > [!Important]
@@ -281,11 +281,11 @@ sudo apt-get install trivy -y
   
 #
 - <b> Once, app password is create and go back to jenkins <mark>Manage Jenkins --> Credentials</mark> to add username and password for email notification</b>
-![image](https://github.com/user-attachments/assets/2a42ec62-87c8-43c8-a034-7be0beb8824e)
+![Login diagram](images/gmail.png)
 
 # 
 - <b> Go back to <mark>Manage Jenkins --> System</mark> and search for <mark>Extended E-mail Notification</mark></b>
-![image](https://github.com/user-attachments/assets/bac81e24-bb07-4659-a251-955966feded8)
+![Login diagram](images/gmail2.png)
 #
 - <b>Scroll down and search for <mark>E-mail Notification</mark> and setup email notification</b>
 > [!Important]
@@ -339,7 +339,7 @@ sudo apt-get install trivy -y
 ![image](https://github.com/user-attachments/assets/a8b45948-766a-49a4-b779-91ac3ce0443c)
 #
 - <b>Now, go to github repository and under <mark>Automations</mark> directory update the <mark>instance-id</mark> field on both the <mark>updatefrontendnew.sh updatebackendnew.sh</mark> with the k8s worker's instance id</b>
-![image](https://github.com/user-attachments/assets/3cb044b4-df88-4d68-bf7c-775cf78d5bf2)
+![Login diagram](images/gitcred.png)
 #
 - <b>Navigate to <mark> Manage Jenkins --> credentials</mark> and add credentials for docker login to push docker image:</b>
 ![image](https://github.com/user-attachments/assets/1a8287fc-b205-4156-8342-3f660f15e8fa)
