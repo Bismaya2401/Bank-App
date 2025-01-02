@@ -121,7 +121,7 @@ sudo apt-get install jenkins -y
   
   - <b>Create EKS Cluster (Master machine)</b>
   ```bash
-  eksctl create cluster --name=wanderlust \
+  eksctl create cluster --name=Bankapp \
                       --region=us-east-2 \
                       --version=1.30 \
                       --without-nodegroup
@@ -130,14 +130,14 @@ sudo apt-get install jenkins -y
   ```bash
   eksctl utils associate-iam-oidc-provider \
     --region us-east-2 \
-    --cluster wanderlust \
+    --cluster Bankapp \
     --approve
   ```
   - <b>Create Nodegroup (Master machine)</b>
   ```bash
-  eksctl create nodegroup --cluster=wanderlust \
+  eksctl create nodegroup --cluster=Bankapp \
                        --region=us-east-2 \
-                       --name=wanderlust \
+                       --name=Bankapp \
                        --node-type=t2.large \
                        --nodes=2 \
                        --nodes-min=2 \
@@ -344,11 +344,11 @@ sudo apt-get install trivy -y
 - <b>Navigate to <mark> Manage Jenkins --> credentials</mark> and add credentials for docker login to push docker image:</b>
 
 #
-- <b>Create a <mark>Wanderlust-CI</mark> pipeline</b>
+- <b>Create a <mark>Bankapp-CI</mark> pipeline</b>
 ![image](https://github.com/user-attachments/assets/55c7b611-3c20-445f-a49c-7d779894e232)
 
 #
-- <b>Create one more pipeline <mark>Wanderlust-CD</mark></b>
+- <b>Create one more pipeline <mark>Bankapp-CD</mark></b>
 ![image](https://github.com/user-attachments/assets/23f84a93-901b-45e3-b4e8-a12cbed13986)
 ![image](https://github.com/user-attachments/assets/ac79f7e6-c02c-4431-bb3b-5c7489a93a63)
 
@@ -381,10 +381,10 @@ chmod 777 /var/run/docker.sock
   ![image](https://github.com/user-attachments/assets/4cab99aa-cef3-45f6-9150-05004c2f09f8)
   - <b>Add your cluster to argocd</b>
   ```bash
-  argocd cluster add Wanderlust@wanderlust.us-west-1.eksctl.io --name wanderlust-eks-cluster
+  argocd cluster add Bankapp@Bankapp.us-west-1.eksctl.io --name Bankapp-eks-cluster
   ```
   > [!Tip]
-  > Wanderlust@wanderlust.us-west-1.eksctl.io --> This should be your EKS Cluster Name.
+  > Bankapp@Bankapp.us-west-1.eksctl.io --> This should be your EKS Cluster Name.
 
   ![image](https://github.com/user-attachments/assets/0f36aafd-bab9-4ef8-ba5d-3eb56d850604)
   - <b> Once your cluster is added to argocd, go to argocd console <mark>Settings --> Clusters</mark> and verify it</b>
@@ -520,7 +520,7 @@ kubectl get secret --namespace prometheus stable-grafana -o jsonpath="{.data.adm
 ## Clean Up
 - <b id="Clean">Delete eks cluster</b>
 ```bash
-eksctl delete cluster --name=wanderlust --region=us-west-1
+eksctl delete cluster --name=Bankapp --region=us-west-1
 ```
 
 #
