@@ -291,9 +291,9 @@ sudo apt-get install trivy -y
 > [!Important]
 > Enter your gmail password which we copied recently in password field <mark>E-mail Notification --> Advance</mark>
 
-![image](https://github.com/user-attachments/assets/14e254fc-1400-457e-b3f4-046404b66950)
-![image](https://github.com/user-attachments/assets/7be70b3a-b0dc-415c-838a-b1c6fd87c182)
-![image](https://github.com/user-attachments/assets/cffb6e1d-4838-483e-97e0-6851c204ab21)
+![Login diagram](images/gmail.png)
+![Login diagram](images/gmail2.png)
+
 
 #
 ## Steps to implement the project:
@@ -323,7 +323,7 @@ sudo apt-get install trivy -y
 ![image](https://github.com/user-attachments/assets/2fdc1e56-f78c-43d2-914a-104ec2c8ea86)
 #
 - <b> Go to <mark> Manage Jenkins --> credentials</mark> and add Github credentials to push updated code from the pipeline:</b>
-![image](https://github.com/user-attachments/assets/4d0c1a47-621e-4aa2-a0b1-71927fcdaef4)
+![Login diagram](images/gitcred.png)
 > [!Note]
 > While adding github credentials add Personal Access Token in the password field.
 #
@@ -345,12 +345,10 @@ sudo apt-get install trivy -y
 
 #
 - <b>Create a <mark>Bankapp-CI</mark> pipeline</b>
-![image](https://github.com/user-attachments/assets/55c7b611-3c20-445f-a49c-7d779894e232)
 
 #
 - <b>Create one more pipeline <mark>Bankapp-CD</mark></b>
-![image](https://github.com/user-attachments/assets/23f84a93-901b-45e3-b4e8-a12cbed13986)
-![image](https://github.com/user-attachments/assets/ac79f7e6-c02c-4431-bb3b-5c7489a93a63)
+
 
 #
 - <b>Provide permission to docker socket so that docker build and push command do not fail (Jenkins Worker)</b>
@@ -388,11 +386,11 @@ chmod 777 /var/run/docker.sock
 
   ![image](https://github.com/user-attachments/assets/0f36aafd-bab9-4ef8-ba5d-3eb56d850604)
   - <b> Once your cluster is added to argocd, go to argocd console <mark>Settings --> Clusters</mark> and verify it</b>
-  ![image](https://github.com/user-attachments/assets/4490b632-19fd-4499-a341-fabf8488d13c)
+
 #
 - <b>Go to <mark>Settings --> Repositories</mark> and click on <mark>Connect repo</mark> </b>
 ![image](https://github.com/user-attachments/assets/cc8728e5-546b-4c46-bd4c-538f4cd6a63d)
-![image](https://github.com/user-attachments/assets/eb3646e2-db84-4439-a11a-d4168080d9cc)
+
 
 > [!Note]
 > Connection should be successful
