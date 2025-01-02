@@ -21,7 +21,7 @@
 - SonarQube (Quality)
 - Trivy (Filesystem Scan)
 - ArgoCD (CD)
-- Redis (Caching)
+- Terraform (IaC)
 - AWS EKS (Kubernetes)
 - Helm (Monitoring using grafana and prometheus)
 
